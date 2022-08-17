@@ -1,0 +1,33 @@
+{
+    "name": "front-sinuca",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@types/dotenv": "^8.2.0",
+        "@types/node": "^18.7.6",
+        "@types/react-select": "^5.0.1",
+        "autoprefixer": "^10.4.7",
+        "axios": "^0.27.2",
+        "dotenv": "^16.0.1",
+        "postcss": "^8.4.14",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-dotenv": "^0.1.3",
+        "react-select": "^5.4.0",
+        "sass": "^1.53.0",
+        "tailwindcss": "^3.1.3"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "@vitejs/plugin-react": "^1.3.0",
+        "postcss-nesting": "^10.1.10",
+        "typescript": "^4.6.3",
+        "vite": "^2.9.9"
+    }
+}
