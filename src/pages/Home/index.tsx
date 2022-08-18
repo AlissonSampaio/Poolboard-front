@@ -54,7 +54,7 @@ export default function Home() {
               playerPoints={playerPoints!}
               onClickFunction={changePlayerPoints}
             ></Card>
-            <Select
+            {/* <Select
               value={player?.name}
               options={leftList.map((player, index) => {
                 return { value: player, label: player.name };
@@ -71,7 +71,7 @@ export default function Home() {
               onChange={(selectedOption) => {
                 changePlayer(selectedOption?.value);
               }}
-            ></Select>
+            ></Select> */}
           </div>
         ) : null}
         <img src={vs} style={{ alignSelf: "center", maxHeight: "250px" }}></img>
@@ -82,7 +82,7 @@ export default function Home() {
               playerPoints={opponentPoints!}
               onClickFunction={changeOpponentPoints}
             ></Card>
-            <Select
+            {/* <Select
               name="players"
               id="players"
               value={opponent?.name}
@@ -101,7 +101,7 @@ export default function Home() {
               onChange={(selectedOption) => {
                 changeOpponent(selectedOption.value);
               }}
-            ></Select>
+            ></Select> */}
           </div>
         ) : null}
       </div>
