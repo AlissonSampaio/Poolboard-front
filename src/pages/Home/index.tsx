@@ -38,6 +38,16 @@ export default function Home() {
     );
   }
 
+  const leftOptions: any[] = [];
+  leftList.map((player, index) => {
+    leftOptions.push({ value: player, label: player.name });
+  });
+
+  const rightOptions: any[] = [];
+  leftList.map((player, index) => {
+    rightOptions.push({ value: player, label: player.name });
+  });
+
   return (
     <>
       <div className="glow flex items-center justify-center">
@@ -54,11 +64,9 @@ export default function Home() {
               playerPoints={playerPoints!}
               onClickFunction={changePlayerPoints}
             ></Card>
-            {/* <Select
+            <Select
               value={player?.name}
-              options={leftList.map((player, index) => {
-                return { value: player, label: player.name };
-              })}
+              options={leftOptions}
               styles={{
                 option: (provided, state) => ({
                   ...provided,
@@ -69,9 +77,9 @@ export default function Home() {
               }}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               onChange={(selectedOption) => {
-                changePlayer(selectedOption?.value);
+                changePlayer((selectedOption as any)?.value);
               }}
-            ></Select> */}
+            ></Select>
           </div>
         ) : null}
         <img src={vs} style={{ alignSelf: "center", maxHeight: "250px" }}></img>
@@ -82,13 +90,11 @@ export default function Home() {
               playerPoints={opponentPoints!}
               onClickFunction={changeOpponentPoints}
             ></Card>
-            {/* <Select
+            <Select
               name="players"
               id="players"
               value={opponent?.name}
-              options={rightList.map((player, index) => {
-                return { value: player, label: player.name };
-              })}
+              options={rightOptions}
               styles={{
                 option: (provided, state) => ({
                   ...provided,
@@ -99,9 +105,9 @@ export default function Home() {
               }}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               onChange={(selectedOption) => {
-                changeOpponent(selectedOption.value);
+                changeOpponent((selectedOption as any)?.value);
               }}
-            ></Select> */}
+            ></Select>
           </div>
         ) : null}
       </div>
