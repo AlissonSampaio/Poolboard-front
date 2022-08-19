@@ -33,9 +33,9 @@ export default () => {
     try {
       const { data } = await api.get<Player[]>("/players");
       setPlayers(data);
-      setPlayer(data[2]);
-      setOpponent(data[4]);
-      setupMatch(data[2].id, data[4].id);
+      setPlayer(data[0]);
+      setOpponent(data[1]);
+      setupMatch(data[0].id, data[1].id);
     } catch (error) {
       console.log(error);
     }
