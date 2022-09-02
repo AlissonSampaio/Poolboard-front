@@ -6,7 +6,6 @@ import Card from "../../components/Card";
 
 import vs from "../../assets/images/vs.png";
 import "./styles.css";
-import { data } from "autoprefixer";
 import useHome from "./useHome";
 
 export default function Home() {
@@ -44,7 +43,7 @@ export default function Home() {
   });
 
   const rightOptions: any[] = [];
-  leftList.map((player, index) => {
+  rightList.map((player, index) => {
     rightOptions.push({ value: player, label: player.name });
   });
 
